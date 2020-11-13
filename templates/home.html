@@ -1,0 +1,14 @@
+{% block title %}Homepage{% endblock %} {% block content %}
+<div class="container" id="container_id">
+    <div id="div_messages">
+        {% if messages %} {% for message in messages %}
+        <div style="margin-top: 10px" class="alert alert-{{ message.tags }} alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+        {% endfor %} {% endif %}
+    </div>
+    <div class="row" style="margin-bottom: 10px; margin-top: 10px">This is homepage</div>
+</div>
+
+{% endblock %}
